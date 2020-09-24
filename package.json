@@ -1,25 +1,22 @@
 {
-  "name": "FastFoodFast-Express",
+  "name": "fast-food-fast",
   "version": "1.0.0",
-  "description": "The legendary FastFOODFast App makes a comeback with a node-express API using Postgres",
+  "description": "Fast-food-fast  with a node-express API using Postgres",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "create": "node --require @babel/register server/models/db createAllTables",
-    "drop": "node --require @babel/register server/models/db dropAllTables",
-    "dev": "nodemon --exec babel-node app.js"
-  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/saladinjake/FastFoodFast-Express.git"
   },
+  "scripts": {
+    "start": "nodemon --exec babel-node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix app/"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ekumamait/FastFoodFast-Express/issues"
-  },
-  "homepage": "https://github.com/ekumamait/FastFoodFast-Express#readme",
+
   "dependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
