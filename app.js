@@ -2,7 +2,7 @@ import "@babel/polyfill";
 import express from "express";
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-// import Auth from './src/middleware/Auth';
+import Auth from './server/middleware/Auth';
 import router from './server/routes/routes';
 
 // creating app instance
@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(router);
-// app.use(Auth);
+app.use(Auth);
 dotenv.config();
 
 
